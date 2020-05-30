@@ -1,0 +1,164 @@
+name: V1
+on:
+  watch:
+    types: [started]
+    
+#  push:
+#    branches: 
+#      - master
+  
+jobs:
+#   create:
+#     runs-on: ubuntu-18.04
+#     steps:
+#      - name: Checkout
+#        uses: actions/checkout@master
+#     container: node:10.18-jessie
+
+#     # Service containers to run with `container-job`
+#     services:
+#       # Label used to access the service container
+#       minecraft:
+#         # Docker Hub image
+#         image: itzg/minecraft-server
+#         # Provide the password for postgres
+#         ports:
+#           - 25565:25565
+#         env:
+#           EULA: TRUE
+#         # Set health checks to wait until postgres has started
+#         options: 
+#           -it
+
+  timer1:
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Run boot script
+      run: |
+        ./autoexec.sh
+
+    - name: Timer
+      run: |
+         ./timer.sh
+        
+  timer2:
+    needs: [timer1]
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Timer
+      run: |
+        ./timer.sh
+
+  timer3:
+    needs: [timer2]
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Timer
+      run: |
+        ./timer.sh
+
+  timer4:
+    needs: [timer3]
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Timer
+      run: |
+        ./timer.sh
+
+  timer5:
+    needs: [timer4]
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Timer
+      run: |
+        ./timer.sh
+
+  timer6:
+    needs: [timer5]
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Timer
+      run: |
+        ./timer.sh
+
+  timer7:
+    needs: [timer6]
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Timer
+      run: |
+        ./timer.sh
+
+  timer8:
+    needs: [timer7]
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Timer
+      run: |
+        ./timer.sh
+
+  timer9:
+    needs: [timer8]
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Timer
+      run: |
+        ./timer.sh
+
+  timer10:
+    needs: [timer9]
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Timer
+      run: |
+        ./timer.sh
+
+  timer11:
+    needs: [timer10]
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Timer
+      run: |
+        ./timer.sh
+
+  timer12:
+    needs: [timer11]
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Timer
+      run: |
+        ./timer.sh
+
+  timer13:
+    needs: [timer12]
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Timer
+      run: |
+        ./timer.sh
